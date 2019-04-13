@@ -7,8 +7,8 @@ before_install:
     - export TZ='Asia/Shanghai' # 更改时区
 
 install:
-  - git clone -b master https://github.com/xiongzhun/sign_youqu.git
-  - cd sign_youqu
+  - git clone -b master https://github.com/xiongzhun/new_youqu.git
+  - cd new_youqu
   - pip install -r requirements.txt
 
 script:
