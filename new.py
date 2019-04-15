@@ -133,7 +133,7 @@ def chat_in_group(c, group_id, user_id, content):
     params = {
         "content": content,
         "userId": user_id,
-        "msgId": "APP083",
+        "msgId": "GET_OFFLINEMSG",
         "isOriginal": True,
         "groupId": group_id,
         "type": 1,
@@ -305,7 +305,7 @@ def chat_all_user_in_group(c, userlist, group_id, interval):
             userid = user["userId"].encode('utf-8')
 
             chat_resp, chat_body = chat_in_group(c, group_id,userid, LAST_CHAT_CONTENT)
-            LOG.info("User %(name)s :chat in youqu, resp: %(resp)s, "
+            LOG.info("User %(userName)s :chat in youqu, resp: %(resp)s, "
                      "body: %(body)s", {'userName': username,'resp': chat_resp,'body': chat_body})
 
             time.sleep(random.randint(10, interval))
