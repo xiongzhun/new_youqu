@@ -287,7 +287,6 @@ def sign_all_user_in_group(c, userlist, group_id, interval):
                      "body: %(body)s", {'name': user['userName'],
                                         'resp': sign_resp,
                                         'body': sign_body})
-
     except Exception, e:
         LOG.error("except: %s", e.message)
 
